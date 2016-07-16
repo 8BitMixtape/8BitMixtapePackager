@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source "./setup_git_credential"
-
 function check_file_exists()
 {
 	local _FILE_NAME=${1}
@@ -17,6 +15,7 @@ function check_file_exists()
 
 if check_file_exists "./ArduinoPackager/packager"
 then
+	source "./setup_git_credential"
 	source "./ArduinoPackager/packager"
 else
 	echo "first time running packager.. fetching submodule.."
