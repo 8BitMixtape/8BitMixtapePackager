@@ -11,6 +11,9 @@ env:
 #  - if [ -z "$TRAVIS_TAG" ]; then exit 0; fi
 #  - bash packager --add $TRAVIS_TAG $TRAVIS_TAG
 #  - bash packager pull
+cache:
+  directories:
+    - $HOME/build
 
 script: 
   - bash packager build
