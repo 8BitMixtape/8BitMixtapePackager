@@ -13,9 +13,6 @@ env:
 #  - bash packager pull
 
 script: 
-  - bash setup_git_credential  
-  - echo "$(ssh-agent -s)"
-  - echo "$(ssh-add -l)"
   - bash packager build
   - bash packager publish
 
