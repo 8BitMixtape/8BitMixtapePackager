@@ -6,6 +6,7 @@ env:
   global:
   - ENCRYPTION_LABEL: "62c64065c72c"
   - COMMIT_AUTHOR_EMAIL: "travis@cocomake.co"
+  - COMMIT_AUTHOR_NAME: "Travis CI"
 
 # before_script:
 #  - if [ -z "$TRAVIS_TAG" ]; then exit 0; fi
