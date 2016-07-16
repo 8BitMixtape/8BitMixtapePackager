@@ -15,6 +15,6 @@ before_script:
 
 script: 
   - bash packager build
-
-after_script:
   - bash packager publish
+  
+# after_script:
