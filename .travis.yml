@@ -1,0 +1,18 @@
+language: generic
+
+# optionally specify a list of environments, for example to test different RDBMS
+
+# env:
+#   - DB=mysql
+#   - DB=pgsql
+
+before_script:
+  - if [ -z "$TRAVIS_TAG" ]; then exit 0; fi
+  - bash packager --add $TRAVIS_TAG $TRAVIS_TAG
+  - bash packager pull
+
+
+script: bash packager build
+
+after_script:
+  - bash packager publish
