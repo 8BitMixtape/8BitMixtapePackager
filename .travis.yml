@@ -6,11 +6,10 @@ language: generic
 #   - DB=mysql
 #   - DB=pgsql
 
-before_script:
-  - if [ -z "$TRAVIS_TAG" ]; then exit 0; fi
-  - bash packager --add $TRAVIS_TAG $TRAVIS_TAG
-  - bash packager pull
-
+# before_script:
+#   - if [ -z "$TRAVIS_TAG" ]; then exit 0; fi
+#   - bash packager --add $TRAVIS_TAG $TRAVIS_TAG
+#   - bash packager pull
 
 script: bash packager build
 
