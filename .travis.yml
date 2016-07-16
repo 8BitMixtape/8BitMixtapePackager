@@ -2,18 +2,19 @@ language: generic
 
 # optionally specify a list of environments, for example to test different RDBMS
 
-# env:
-#   - DB=mysql
-#   - DB=pgsql
+env:
+  global:
+  - ENCRYPTION_LABEL: "62c64065c72c"
+  - COMMIT_AUTHOR_EMAIL: "travis@cocomake.co"
 
-# before_script:
-#   - if [ -z "$TRAVIS_TAG" ]; then exit 0; fi
-#   - bash packager --add $TRAVIS_TAG $TRAVIS_TAG
-#   - bash packager pull
+before_script:
+  - bash setup_git_credential  
+#  - if [ -z "$TRAVIS_TAG" ]; then exit 0; fi
+#  - bash packager --add $TRAVIS_TAG $TRAVIS_TAG
+#  - bash packager pull
 
 script: 
   - bash packager build
-  - bash packager publish
 
-# after_script:
-  
+after_script:
+  - bash packager publish
