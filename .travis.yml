@@ -7,14 +7,14 @@ env:
   - ENCRYPTION_LABEL: "62c64065c72c"
   - COMMIT_AUTHOR_EMAIL: "travis@cocomake.co"
 
-before_script:
-  - bash setup_git_credential  
+# before_script:
 #  - if [ -z "$TRAVIS_TAG" ]; then exit 0; fi
 #  - bash packager --add $TRAVIS_TAG $TRAVIS_TAG
 #  - bash packager pull
 
 script: 
+  - bash setup_git_credential  
   - bash packager build
   - bash packager publish
-  
+
 # after_script:
