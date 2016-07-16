@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source "./setup_git_credential"
+
 function check_file_exists()
 {
 	local _FILE_NAME=${1}
