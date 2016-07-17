@@ -29,5 +29,8 @@ done
 
 find . -name "*Teeny*" -exec bash -c 'mv "$1" "$(sed "s/\Teeny$/Coco/" <<< "$1")"' - '{}' \;
 
+ls -al ./CocoSynth/src/
+
+exit 1
 
 cd ${curr_dir}
