@@ -18,8 +18,8 @@ find ./Teeny*/ -type f -exec sed -i 's/TEENY/COCO/g' '{}' \;
 # find . -name Teeny* | sed -e "p;s/Teeny/Coco/" | xargs -n2 mv
 # find . -name *Teeny* | sed -e "p;s/Teeny/Coco/" | xargs -n2 mv
 
-shopt -s globstar
-rename 's/Teeny/Coco/' **
+# shopt -s globstar
+# rename 's/Teeny/Coco/' **
 # rename Teeny Coco **/*dbg*
 
 # for file in $(find ./** -name "*Teeny*")
@@ -29,16 +29,18 @@ rename 's/Teeny/Coco/' **
 
 # find ./** -name "*Teeny*" -exec bash -c 'mv "$1" "$(sed "s/\Teeny$/Coco/" <<< "$1")"' - '{}' \;
 
-find . -name '*Teeny*' -print0 | xargs -0 -n1 bash -c 'mv "$0" "${0/Teeny/Coco}"'
+# find . -name '*Teeny*' -print0 | xargs -0 -n1 bash -c 'mv "$0" "${0/Teeny/Coco}"'
 
 ls -al ./CocoKeyboard/examples/CocoKeyboard/
 
 mmv ";Teeny*" "#1Coco#2"
 
+ls -al ./CocoKeyboard/examples/CocoKeyboard/
 
-if check_file_exists "./CocoKeyboard/examples/CocoKeyboard/TeenyKeyboard.ino"; then
-exit 1
-fi
+
+# if check_file_exists "./CocoKeyboard/examples/CocoKeyboard/TeenyKeyboard.ino"; then
+# exit 1
+# fi
 
 
 cd ${curr_dir}
