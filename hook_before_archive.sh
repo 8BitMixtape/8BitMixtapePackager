@@ -17,5 +17,6 @@ find . -iname "*Teeny*" -exec rename Teeny Coco '{}' \;
 
 shopt -s globstar
 rename 's/Teeny/Coco/' **
+rename Teeny Coco **/*Teeny*
 
 cd ${curr_dir}
