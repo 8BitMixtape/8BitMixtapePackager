@@ -22,17 +22,20 @@ shopt -s globstar
 rename 's/Teeny/Coco/' **
 # rename Teeny Coco **/*dbg*
 
-for file in $(find ./** -name "*Teeny*")
-do 
-  echo mv $file `echo $file | sed s/Teeny$/Coco/`
-done
+# for file in $(find ./** -name "*Teeny*")
+# do 
+#   echo mv $file `echo $file | sed s/Teeny$/Coco/`
+# done
 
-find ./** -name "*Teeny*" -exec bash -c 'mv "$1" "$(sed "s/\Teeny$/Coco/" <<< "$1")"' - '{}' \;
+# find ./** -name "*Teeny*" -exec bash -c 'mv "$1" "$(sed "s/\Teeny$/Coco/" <<< "$1")"' - '{}' \;
 
 find . -name '*Teeny*' -print0 | xargs -0 -n1 bash -c 'mv "$0" "${0/Teeny/Coco}"'
 
-ls -al ./CocoSynth/src/
+# ls -al ./CocoSynth/src/
 
+if check_file_exists "./CocoSynth/src/TeenySynth.h"; then
 exit 1
+fi
+
 
 cd ${curr_dir}
