@@ -18,9 +18,8 @@ find ./Teeny*/ -type f -exec sed -i 's/TEENY/COCO/g' '{}' \;
 # find . -name Teeny* | sed -e "p;s/Teeny/Coco/" | xargs -n2 mv
 # find . -name *Teeny* | sed -e "p;s/Teeny/Coco/" | xargs -n2 mv
 
-# shopt -s globstar
-# rename 's/Teeny/Coco/' **
-# rename Teeny Coco **/*dbg*
+shopt -s globstar
+rename 's/Teeny/Coco/' **
 
 # for file in $(find ./** -name "*Teeny*")
 # do 
@@ -33,7 +32,7 @@ find ./Teeny*/ -type f -exec sed -i 's/TEENY/COCO/g' '{}' \;
 
 ls -al ./CocoKeyboard/examples/CocoKeyboard/
 
-mmv -r ";Teeny*" "#1Coco#2"
+mmv ";Teeny*" "#1Coco#2"
 
 ls -al ./CocoKeyboard/examples/CocoKeyboard/
 
