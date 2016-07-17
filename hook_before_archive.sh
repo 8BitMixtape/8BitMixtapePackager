@@ -12,6 +12,8 @@ find ./Teeny*/ -type f -exec sed -i 's/TEENY/COCO/g' '{}' \;
 
 #rename folder name
 # find ./Teeny* -depth -name "*Teeny*" -execdir sh -c 'mv {} $(echo {} | sed "s/Teeny/Coco/")' \;
+find . -name "*Teeny*" -exec rename 's/Teeny$/Coco/' '{}' \;
+
 shopt -s globstar
 rename 's/Teeny/Coco/' **
 
