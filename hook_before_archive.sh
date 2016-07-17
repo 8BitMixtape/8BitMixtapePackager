@@ -38,9 +38,9 @@ mmv ";Teeny*" "#1Coco#2"
 ls -al ./CocoKeyboard/examples/CocoKeyboard/
 
 
-if check_file_exists "./CocoKeyboard/examples/CocoKeyboard/TeenyKeyboard.ino"; then
-exit 1
-fi
+# if check_file_exists "./CocoKeyboard/examples/CocoKeyboard/TeenyKeyboard.ino"; then
+# exit 1
+# fi
 
 
 cd ${curr_dir}
