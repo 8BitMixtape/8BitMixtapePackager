@@ -33,7 +33,7 @@ find . -name '*Teeny*' -print0 | xargs -0 -n1 bash -c 'mv "$0" "${0/Teeny/Coco}"
 
 # ls -al ./CocoSynth/src/
 
-if check_file_exists "./CocoSynth/src/TeenySynth.h"; then
+if check_file_exists "./CocoKeyboard/examples/CocoKeyboard/TeenyKeyboard.ino"; then
 exit 1
 fi
 
