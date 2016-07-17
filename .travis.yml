@@ -2,6 +2,10 @@ language: generic
 
 # optionally specify a list of environments, for example to test different RDBMS
 
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y mmv
+
 env:
   global:
   - ENCRYPTION_LABEL: "62c64065c72c"
