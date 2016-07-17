@@ -22,12 +22,12 @@ shopt -s globstar
 rename 's/Teeny/Coco/' **
 # rename Teeny Coco **/*dbg*
 
-for file in $(find . -name "*Teeny*")
+for file in $(find ./** -name "*Teeny*")
 do 
   echo mv $file `echo $file | sed s/Teeny$/Coco/`
 done
 
-find . -name "*Teeny*" -exec bash -c 'mv "$1" "$(sed "s/\Teeny$/Coco/" <<< "$1")"' - '{}' \;
+find ./** -name "*Teeny*" -exec bash -c 'mv "$1" "$(sed "s/\Teeny$/Coco/" <<< "$1")"' - '{}' \;
 
 ls -al ./CocoSynth/src/
 
