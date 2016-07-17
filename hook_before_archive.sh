@@ -33,7 +33,7 @@ find ./Teeny*/ -type f -exec sed -i 's/TEENY/COCO/g' '{}' \;
 
 ls -al ./CocoKeyboard/examples/CocoKeyboard/
 
-mmv ";Teeny*" "#1Coco#2"
+mmv -r ";Teeny*" "#1Coco#2"
 
 ls -al ./CocoKeyboard/examples/CocoKeyboard/
 
