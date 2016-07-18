@@ -1,0 +1,1 @@
+avr/libraries/CocoMake7Lib
