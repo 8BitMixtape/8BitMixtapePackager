@@ -10,7 +10,7 @@ STAGING_DIR="./tools/staging"
 
 
 DESTINATION_REPO="../../CocoMake7Platform/avr/tools/avrdude"
-COMMIT_HASH="fc41fd8f118a06f863f65b286616f599adb8788f"
+COMMIT_HASH="7c139bd4267f6b902aa6b931838e701ad0744919"
 
 
 #ssh ${REMOTE} -p ${PORT} bash -c "'
@@ -56,10 +56,11 @@ mv ./avrdude ./avrdude_bin
 cp "/lib/libusb-0.1.so.4" .
 cp "/lib/libusb-1.0.so.0" .
 cp "/lib/libncurses.so.5" .
+cp "/usr/lib/libasound.so.2.0.0" .
 
 git log -1 > changelog.txt
 
 '"
 
 mkdir -p "${cwd}/${DESTINATION_REPO}/linux"
-scp -P ${PORT} ${REMOTE}:${REPO_DIR}/avrdude-6.0rc1/\{avrdude_bin,changelog.txt,libusb-0.1.so.4,libusb-1.0.so.0,libncurses.so.5\} "${cwd}/${DESTINATION_REPO}/linux"
+scp -P ${PORT} ${REMOTE}:${REPO_DIR}/avrdude-6.0rc1/\{avrdude_bin,changelog.txt,libusb-0.1.so.4,libusb-1.0.so.0,libncurses.so.5,libasound.so.2.0.0\} "${cwd}/${DESTINATION_REPO}/linux"
