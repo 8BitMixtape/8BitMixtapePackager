@@ -9,8 +9,8 @@ REPO_DIR="/root/AvrdudeGnusbuinoMidi2Kicker"
 STAGING_DIR="./tools/staging"
 
 
-DESTINATION_REPO="../platform/avr/tools/avrdude"
-COMMIT_HASH="fa58e264"
+DESTINATION_REPO="../../CocoMake7Platform/avr/tools/avrdude"
+COMMIT_HASH="fc41fd8f118a06f863f65b286616f599adb8788f"
 
 
 #ssh ${REMOTE} -p ${PORT} bash -c "'
@@ -33,6 +33,12 @@ git fetch --all
 git pull --all
 git reset --hard ${COMMIT_HASH}
 git clean -dfx
+
+
+cd "${REPO_DIR}/babygnusbsysex"
+mkdir "Release"
+make clean
+make
 
 cd "${REPO_DIR}/avrdude-6.0rc1"
 chmod +x configure

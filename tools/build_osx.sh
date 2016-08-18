@@ -8,7 +8,7 @@ REPO_URL="https://github.com/ATtinyTeenageRiot/AvrdudeGnusbuinoMidi2Kicker.git"
 STAGING_DIR="staging"
 REPO_DIR="${STAGING_DIR}/AvrdudeGnusbuinoMidi2Kicker"
 
-DESTINATION_REPO="../platform/avr/tools/avrdude"
+DESTINATION_REPO="../../CocoMake7Platform/avr/tools/avrdude"
 COMMIT_HASH="fc41fd8f118a06f863f65b286616f599adb8788f"
 
 #rm -fr "${REPO_DIR}"

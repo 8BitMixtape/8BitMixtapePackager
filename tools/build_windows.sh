@@ -9,8 +9,8 @@ REPO_DIR="/c/Users/BvSsh_VirtualUsers/AvrdudeGnusbuinoMidi2Kicker"
 STAGING_DIR="./tools/staging"
 
 
-DESTINATION_REPO="../platform/avr/tools/avrdude"
-COMMIT_HASH="cbe6bb316d75e56af490ba438e2a5bed0b0a96c8"
+DESTINATION_REPO="../../CocoMake7Platform/avr/tools/avrdude"
+COMMIT_HASH="fc41fd8f118a06f863f65b286616f599adb8788f"
 
 #ssh ${REMOTE} -p ${PORT} bash -c "'
 #cd "${REPO_DIR}/avrdude-6.0rc1"
