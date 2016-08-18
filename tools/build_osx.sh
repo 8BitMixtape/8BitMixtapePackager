@@ -9,7 +9,7 @@ STAGING_DIR="staging"
 REPO_DIR="${STAGING_DIR}/AvrdudeGnusbuinoMidi2Kicker"
 
 DESTINATION_REPO="../../CocoMake7Platform/avr/tools/avrdude"
-COMMIT_HASH="fc41fd8f118a06f863f65b286616f599adb8788f"
+COMMIT_HASH="7db7f06ec33af157b9cf97500c54b367a9b464bb"
 
 #rm -fr "${REPO_DIR}"
 mkdir -p "${cwd}/${REPO_DIR}"
