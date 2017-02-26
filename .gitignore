@@ -1,2 +1,3 @@
 build/*
+deploy_key
 /tools/staging/*
