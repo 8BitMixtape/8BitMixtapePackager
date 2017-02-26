@@ -8,7 +8,7 @@ before_install:
 
 env:
   global:
-  - ENCRYPTION_LABEL: "62c64065c72c"
+  - ENCRYPTION_LABEL: "cabb09466128"
   - COMMIT_AUTHOR_EMAIL: "travis@cocomake.co"
   - COMMIT_AUTHOR_NAME: "Travis CI"
 
