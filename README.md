@@ -1,7 +1,5 @@
-# CocoMake7 Packager
+# 8BitMixtape Packager
 
-1. edit packager.conf
-2. 
-
+Automaticaly upload board version and file when new version is added
 
 todo: documentation
