@@ -1,9 +1,11 @@
 # echo "-- rebranding libraries --"
 # export LC_CTYPE=C LANG=C
 
-# curr_dir=$(pwd)
+curr_dir=$(pwd)
 
-# cd "avr/libraries/"
+cd "avr/libraries/"
+
+find . -name "*.wav" -type f -delete
 
 # #rename variable inside library
 # # find ./Teeny*/ -type f -name '*.*' -exec sed -i '' s/Teeny/Coco/ {} +
@@ -43,4 +45,4 @@
 # # fi
 
 
-# cd ${curr_dir}
+cd ${curr_dir}
